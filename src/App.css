@@ -1,38 +1,66 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@import "leaflet/dist/leaflet.css";
+
+/* custom fonts */
+@font-face {
+  font-family: Poppins;
+  src: url(../public/Fonts/Poppins/Poppins-Regular.ttf);
+  font-weight: 400;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@font-face {
+  font-family: Poppins;
+  src: url(../public/Fonts/Poppins/Poppins-Medium.ttf);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: Poppins;
+  src: url(../public/Fonts/Poppins/Poppins-Bold.ttf);
+  font-weight: 600;
+}
+
+/* media query */
+@media (max-width: 767px) {
+  .header .logo {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .header .search-area {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .header .search-area input {
+    margin-right: 0 !important;
+    width: 100%;
+  }
+
+  .header .search-area button {
+    width: 100%;
+  }
+
+  /* country temperature container */
+  .country-temp-container {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 767px) {
+  .boxes {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media (min-width: 768px) {
+  .boxes {
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
   }
 }

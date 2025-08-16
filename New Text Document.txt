@@ -1,0 +1,63 @@
+  <Container maxWidth="md" dir={'rtl'}>
+          <Card className="weather-app" variant="outlined" sx={{ backgroundColor: 'rgb(28 52 91 / 36%)', borderRadius: "20px", padding: '10px', color: 'white' }}>
+
+            <CardContent>
+
+              {/* HEADER => COUNTRY + DATE */}
+
+              <header style={{ display: 'flex', alignItems: 'end', marginBottom: '15px', fontWeight: '500' }}>
+                <Typography sx={{ margin: '0 10px' }} variant="h1" component="div">
+                  الرياض
+                </Typography>
+                <Typography sx={{ margin: '10px 0' }} variant="p" component="div">
+                  الاثنين  20/20/ 2331
+                </Typography>
+              </header>
+
+              {/* === HEADER => COUNTRY + DATE === */}
+
+              <Divider sx={{ backgroundColor: 'white' }} />
+
+              {/* BODY */}
+              <div className='card-data' style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-around' }}>
+                <div className='card-info' style={{ width: '40%' }}>
+
+                  <div className='tempriture' style={{ display: 'flex', alignItems: 'center' }}>
+                    <Typography sx={{}} variant="h1" component="div">
+                      39
+                    </Typography>
+                    <div className='tempriture-img'> <img src="" alt="not found" /> </div>
+                  </div>
+
+                  <Typography sx={{ margin: '10px 0', textAlign: 'start' }} variant="p" component="div">
+                    Broken Clouds
+                  </Typography>
+                  <div className='minmax-tempriture' style={{ margin: '20px 0', display: 'flex', alignItems: 'center' }}>
+                    <Typography variant="p" component="div">
+                      الصغري : 77
+                    </Typography>
+                    <Typography variant="h5" component="div" sx={{ margin: '0 20px' }}>
+                      |
+                    </Typography>
+                    <Typography variant="p" component="div">
+                      الكبري : 88
+                    </Typography>
+                  </div>
+                </div>
+                <div className='card-img' style={{ width: '40%' }}><CloudIcon style={{ fontSize: '200px' }} /></div>
+              </div>
+              {/* === BODY === */}
+
+
+            </CardContent>
+
+          </Card>
+          {/* LANGUAGE BUTTON  */}
+          <div style={{ display: 'flex', justifyContent: 'end', margin: '25px 0' }}>
+
+            <Button variant="text" sx={{ color: 'white', fontSize: '18px' }}>انجليزي</Button>
+
+          </div>
+
+          {/* LANGUAGE BUTTON  */}
+        </Container>
