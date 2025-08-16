@@ -100,7 +100,7 @@ export default function Header() {
 
                         <div className="logo" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                             <div style={{ marginRight: '10px' }}>
-                                <img style={{ width: '60px' }} src="/image/weather.png" alt="not found" />
+                                <img style={{ width: '60px' }} src={process.env.PUBLIC_URL + '/image/weather.png'} alt="not found" />
                             </div>
                             <Typography sx={{ color: 'white', fontWeight: '600' }} variant="h5" >
                                 Weatherly
